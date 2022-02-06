@@ -1,0 +1,19 @@
+# MitinoAristovo
+shared-network User_EQ_MA {
+        subnet 10.66.0.172 netmask 255.255.255.252 { option routers  10.66.0.173; }
+        subnet 176.117.44.0 netmask 255.255.255.0 { option routers 176.117.44.1;
+                range 176.117.44.7 176.117.44.254;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                }
+        subnet 176.117.45.0 netmask 255.255.255.0 { option routers 176.117.45.1;
+                range 176.117.45.2 176.117.45.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+}
+
+#Users
+#host 02017578_01 { host-identifier option agent.circuit-id 00:06:0d:77:01:00:00:04 ; fixed-address 176.117.44.2 ; }
+host 2017569_001 { host-identifier option agent.circuit-id 00:06:0d:85:01:00:00:05 ; fixed-address 176.117.44.4 ; }
+host 2017820_001 { host-identifier option agent.circuit-id 00:06:0d:78:01:00:00:0a ; fixed-address 176.117.44.5 ; }

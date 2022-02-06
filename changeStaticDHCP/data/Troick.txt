@@ -1,0 +1,28 @@
+shared-network User_65-xx.msk {
+        subnet 10.66.0.32 netmask 255.255.255.252 { option routers 10.66.0.33; }
+        subnet 178.213.12.0 netmask 255.255.255.0 { option routers 178.213.12.1;
+                range 178.213.12.2 178.213.12.254;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                }
+        subnet 178.213.13.0 netmask 255.255.255.0 { option routers 178.213.13.1;
+                range 178.213.13.15 178.213.13.254;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                }
+}
+
+
+
+host 133333333 {hardware ethernet 4C:5E:0C:EF:09:F6 ; fixed-address 178.213.13.2   ; }
+#host 110700001 {host-identifier option agent.circuit-id 0c:e8:01:02 ; fixed-address 178.213.13.3 ; }
+host 110710154 {host-identifier option agent.circuit-id 00:06:0d:00:01:00:00:31 ; fixed-address 178.213.13.4   ; }
+host 110710009 {hardware ethernet e8:94:f6:b7:82:4f ; fixed-address 178.213.13.5   ; }
+host 110710214 {host-identifier option agent.circuit-id 0c:f3:01:19 ; fixed-address 178.213.13.6 ; }
+host 110710229 {host-identifier option agent.circuit-id 00:06:0c:e9:01:00:00:04 ; fixed-address 178.213.13.7 ; }
+host 110710038 {host-identifier option agent.circuit-id 00:06:0c:ee:01:00:00:0e ; fixed-address 178.213.13.8 ; }
+host 110710172 {hardware ethernet 4c:60:de:e7:6b:d6 ; fixed-address 178.213.13.9   ; }
+#host 110710031 {host-identifier option agent.circuit-id 00:06:0c:ea:01:00:00:07 ; fixed-address 178.213.13.10 ; }
+host 110710100 {host-identifier option agent.circuit-id 00:06:0c:f9:01:00:00:01 ; fixed-address 178.213.13.12 ; }
+host 110710228 {host-identifier option agent.circuit-id 00:06:0c:e6:01:00:00:24 ; fixed-address 178.213.13.13 ; }
+host 110710459 {host-identifier option agent.circuit-id 00:06:0c:f6:01:00:00:02 ; fixed-address 178.213.13.14 ; }

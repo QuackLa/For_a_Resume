@@ -1,0 +1,20 @@
+shared-network User_67-xx.msk {
+        subnet 176.117.46.0 netmask 255.255.255.128    { option routers 176.117.46.1;
+                range 176.117.46.9 176.117.46.126;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                allow unknown-clients;}
+        subnet 176.117.46.128 netmask 255.255.255.192   { option routers 176.117.46.129;
+                range 176.117.46.130 176.117.46.190;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                allow unknown-clients;}
+}
+
+host 0621001_001 {hardware ethernet 00:11:DF:00:07:11 ; fixed-address 176.117.46.2 ; }
+host 0621001_002 {host-identifier option agent.circuit-id 00:06:0c:e5:01:00:00:02 ; fixed-address 176.117.46.3 ; }
+host 0621001_003 { host-identifier option agent.circuit-id 0c:e5:01:09 ; fixed-address 176.117.46.4 ; }
+host 0621001_004 {hardware ethernet 00:11:df:00:3f:46 ; fixed-address 176.117.46.55 ; }
+host 0611245 { host-identifier option agent.circuit-id 11:11:11:11 ; fixed-address 176.117.46.6 ; }
+host 0611258_001 { host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:15 ; fixed-address 176.117.46.7 ; }
+host 0611258_002 { host-identifier option agent.circuit-id 00:04:0c:f8:00:01 ; fixed-address 176.117.46.8 ; }

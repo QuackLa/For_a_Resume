@@ -1,0 +1,119 @@
+shared-network User_66-xx.msk_new {
+        subnet 10.66.0.144 netmask 255.255.255.252 { option routers  10.66.0.145; }
+        subnet 176.117.39.0 netmask 255.255.255.0 {
+                option routers 176.117.39.1;
+                range 176.117.39.30 176.117.39.32;
+                range 176.117.39.52 176.117.39.68;
+                range 176.117.39.72 176.117.39.72;
+                range 176.117.39.74 176.117.39.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+        subnet 176.117.38.0 netmask 255.255.255.0 {
+                option routers 176.117.38.1;
+                range 176.117.38.2 176.117.38.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+        subnet 176.117.37.0 netmask 255.255.255.0 {
+                option routers 176.117.37.1;
+                range 176.117.37.2 176.117.37.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+        subnet 176.117.36.0 netmask 255.255.255.0 {
+                option routers 176.117.36.1;
+                range 176.117.36.2 176.117.36.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+}
+
+
+shared-network Revizor_User_66-xx.msk {
+        subnet 178.213.10.156 netmask 255.255.255.252 {
+                option routers 178.213.10.157;
+                range 178.213.10.158;
+                max-lease-time 600;
+                default-lease-time 600;
+                option domain-name-servers 178.213.8.14, 178.213.10.154;
+                }
+}
+
+shared-network Test_Revizor_User_66-xx.msk {
+        subnet 178.213.10.176 netmask 255.255.255.252 {
+                option routers 178.213.10.177;
+                range 178.213.10.178;
+                max-lease-time 600;
+                default-lease-time 600;
+                option domain-name-servers 178.213.8.14, 178.213.10.154;
+                }
+}
+
+
+
+# Users
+host 110312271 {host-identifier option agent.circuit-id 00:04:0d:ba:01:09 ; fixed-address 176.117.39.2 ; }
+host 110312245 {host-identifier option agent.circuit-id 00:04:0d:af:01:01 ; fixed-address 176.117.39.3 ; }
+host 110300004 {host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:15 ; fixed-address 176.117.39.4 ; }
+host 110801031 {host-identifier option agent.circuit-id 00:06:0d:6e:01:00:00:0d ; fixed-address 176.117.39.5 ; }
+host 110311220 {host-identifier option agent.circuit-id 00:06:0c:f2:01:00:00:1d ; fixed-address 176.117.39.6 ; }
+host 0300035001 {host-identifier option agent.circuit-id 00:06:0d:ac:01:00:00:03 ; fixed-address 176.117.39.7 ; }
+host 110311412 {host-identifier option agent.circuit-id 00:06:0c:f9:01:00:00:32 ; fixed-address 176.117.39.8 ; }
+host 7000504001 {host-identifier option agent.circuit-id 00:06:0d:92:01:00:00:04 ; fixed-address 176.117.39.9 ; }
+host 110300017 {hardware ethernet 00:27:22:04:1b:26 ; fixed-address 176.117.39.10 ; }
+host 110312635 {host-identifier option agent.circuit-id 00:04:0d:b5:01:28 ; fixed-address 176.117.39.11 ; }
+host 117000020 {host-identifier option agent.circuit-id 00:06:0d:86:01:00:00:15 ; fixed-address 176.117.39.12 ; }
+host 7000501002 {host-identifier option agent.circuit-id 00:06:0d:92:01:00:00:01 ; fixed-address 176.117.39.13 ; }
+host 110310204 {host-identifier option agent.circuit-id 00:06:0c:e8:01:00:00:04 ; fixed-address 176.117.39.14 ; }
+host 110300042 {host-identifier option agent.circuit-id 00:04:0d:b4:01:08 ; fixed-address 176.117.39.15 ; }
+host 110851376 {host-identifier option agent.circuit-id 0d:4d:00:12 ; fixed-address 176.117.39.16; }
+host 210311195 {host-identifier option agent.circuit-id 00:06:0c:f2:01:00:00:04 ; fixed-address 176.117.39.17 ; }
+host 110210026 {host-identifier option agent.circuit-id 0d:46:01:01 ; fixed-address 176.117.39.18 ; }
+host 110312191 {host-identifier option agent.circuit-id 00:06:0d:ae:01:00:00:01 ; fixed-address 176.117.39.19 ; }
+host 310330084 {host-identifier option agent.circuit-id 00:06:0d:50:01:00:00:02 ; fixed-address 176.117.39.20 ; }
+host 110300039 {host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:11 ; fixed-address 176.117.39.21 ; }
+host 110300040 {host-identifier option agent.circuit-id 00:06:0D:5C:01:00:00:10 ; fixed-address 176.117.39.22 ; }
+host 120800003 {host-identifier option agent.circuit-id 00:06:0d:50:01:00:00:01 ; fixed-address 176.117.39.23 ; }
+host 110310713 {host-identifier option agent.circuit-id 00:06:0d:54:01:00:00:01 ; fixed-address 176.117.39.24 ; }
+host 110312216 {host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:0a ; fixed-address 176.117.39.25 ; }
+host 110851362 {host-identifier option agent.circuit-id 00:06:0d:4c:01:00:00:11 ; fixed-address 176.117.39.26 ; }
+host 110310924 {host-identifier option agent.circuit-id 00:06:0d:64:01:00:00:12 ; fixed-address 176.117.39.27 ; }
+host 110300006 {host-identifier option agent.circuit-id 00:06:0c:fb:01:00:00:2f ; fixed-address 176.117.39.28 ; }
+host 127000020 {host-identifier option agent.circuit-id 00:06:0d:89:01:00:00:08 ; fixed-address 176.117.39.29 ; }
+host 110310480 {host-identifier option agent.circuit-id 00:06:0d:08:01:00:00:09 ; fixed-address 176.117.39.33 ; }
+host 110851412 {host-identifier option agent.circuit-id 0d:52:00:05 ; fixed-address 176.117.39.34 ; }
+host 110300025 {host-identifier option agent.circuit-id 0d:56:01:0f ; fixed-address 176.117.39.35 ; }
+host 110310948 {host-identifier option agent.circuit-id 00:06:0D:5E:01:00:00:17 ; fixed-address 176.117.39.36 ; }
+host 117000015 {host-identifier option agent.circuit-id 00:06:0d:86:01:00:00:08 ; fixed-address 176.117.39.37 ; }
+host 110851621 {host-identifier option agent.circuit-id 0d:52:00:15 ; fixed-address 176.117.39.38 ; }
+host 110310710 {host-identifier option agent.circuit-id 00:06:0d:55:01:00:00:02 ; fixed-address 176.117.39.39 ; }
+host 127000500 {host-identifier option agent.circuit-id 00:06:0d:8b:01:00:00:02 ; fixed-address 176.117.39.40 ; }
+host 110310375 {host-identifier option agent.circuit-id 00:06:0d:00:01:00:00:03 ; fixed-address 176.117.39.41 ; }
+host 110851396 {host-identifier option agent.circuit-id 0d:4d:00:1e ; fixed-address 176.117.39.42 ; }
+host 111851362 {host-identifier option agent.circuit-id 0d:4d:00:07 ; fixed-address 176.117.39.43 ; }
+host 112851362 {host-identifier option agent.circuit-id 0d:4d:00:08 ; fixed-address 176.117.39.44 ; }
+host 110300007 {host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:14 ; fixed-address 176.117.39.45 ; }
+host 110300005 {host-identifier option agent.circuit-id 00:06:0c:fe:01:00:00:01 ; fixed-address 176.117.39.46 ; }
+host 117000500 {host-identifier option agent.circuit-id 00:06:0d:8b:01:00:00:01 ; fixed-address 176.117.39.47 ; }
+host 119999997 {host-identifier option agent.circuit-id 00:06:0d:89:01:00:00:01 ; fixed-address 176.117.39.48 ; }
+host 137000500 {host-identifier option agent.circuit-id 00:06:0d:8b:01:00:00:03 ; fixed-address 176.117.39.49 ; }
+host 110801028 {host-identifier option agent.circuit-id 00:06:0d:6e:01:00:00:01 ; fixed-address 176.117.39.50 ; }
+host 110310130 {host-identifier option agent.circuit-id 0d:11:01:0f ; fixed-address 176.117.39.51 ; }
+host 110300035 {host-identifier option agent.circuit-id 0D:56:01:17 ; fixed-address 176.117.39.69 ; }
+host 120300035 {host-identifier option agent.circuit-id 0D:56:01:18 ; fixed-address 176.117.39.70 ; }
+host 130300035 {host-identifier option agent.circuit-id 00:06:0D:5C:01:00:00:18 ; fixed-address 176.117.39.71 ; }
+host 110990022 {host-identifier option agent.circuit-id 00:06:0d:07:01:00:00:06 ; fixed-address 176.117.39.73 ; }
+
+
+### not own clients or test
+#Nikita
+host 310311111 {hardware ethernet 00:1a:79:1b:39:9d; fixed-address 10.66.3.254 ; }
+host 310311113 {hardware ethernet 00:1a:79:28:97:c2; fixed-address 10.66.3.252 ; }
+host 319999900 {hardware ethernet f8:f0:82:4f:0b:ab; fixed-address 10.66.3.251 ; }
+host 319999997 {hardware ethernet 00:1a:79:05:90:40 ; fixed-address 10.66.3.250 ; }
+host 319999996 {hardware ethernet 4C:5E:0C:B8:A6:CA ; fixed-address 10.66.3.249 ;}
+host 319999995 {hardware ethernet f8:f0:82:4f:0b:ac ; fixed-address 10.66.3.10 ;}
+host 319999994 {hardware ethernet f8:f0:82:4f:0b:ad ; fixed-address 10.66.3.11 ;}
+host 319999993 {hardware ethernet 6c:3b:6b:1e:1f:1b ; fixed-address 10.66.3.12 ;}
+host 31992 {hardware ethernet 00:21:cc:d3:7e:ba ; fixed-address 10.66.3.13 ;}

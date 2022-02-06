@@ -1,0 +1,30 @@
+# Networks
+shared-network User_68-xx.msk_SE100 {
+        subnet 10.66.0.148 netmask 255.255.255.252 { option routers  10.66.0.149; }
+        subnet 176.117.42.0 netmask 255.255.255.0 { option routers 176.117.42.1;
+                range 176.117.42.23 176.117.42.254;
+                default-lease-time 3600;
+                max-lease-time 3600;
+                allow unknown-clients;}
+        subnet 176.117.43.0 netmask 255.255.255.0 { option routers 176.117.43.1;
+                range 176.117.43.2 176.117.43.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                allow unknown-clients;}
+}
+
+host 419999985 {host-identifier option agent.circuit-id 00:06:0c:e5:01:00:00:17 ; fixed-address 176.117.42.2; }
+host 0800002_01 {host-identifier option agent.circuit-id 00:06:0c:e7:01:00:00:02 ; fixed-address 176.117.42.3 ; }
+host 0851302_01 {hardware ethernet 90:e6:ba:30:83:63 ; fixed-address 176.117.42.4 ; }
+#host 0851197_01 {host-identifier option agent.circuit-id 00:06:0d:04:01:00:00:09 ; fixed-address 176.117.42.5 ;}
+host 2017391_01 {host-identifier option agent.circuit-id 00:06:0c:f6:01:00:00:18 ; fixed-address 176.117.42.6 ; }
+host 0800023_01 {host-identifier option agent.circuit-id 00:06:0d:18:01:00:00:1b ; fixed-address 176.117.42.7 ; }
+#host 0851254_01 {host-identifier option agent.circuit-id 00:06:0D:04:01:00:00:03 ; fixed-address 176.117.42.8 ; }
+#host 0851002_01 {host-identifier option agent.circuit-id 00:06:0d:06:01:00:00:04 ; fixed-address 176.117.42.10; }
+host 0851499_01 {host-identifier option agent.circuit-id 00:06:0d:01:01:00:00:09 ; fixed-address 176.117.42.11; }
+host 0800013_01 {host-identifier option agent.circuit-id 00:06:0d:0b:01:00:00:18 ; fixed-address 176.117.42.12; }
+host 0800010_01 {host-identifier option agent.circuit-id 00:06:0d:0a:01:00:00:01 ; fixed-address 176.117.42.13; }
+host ns2.netintel.ru {hardware ethernet 00:18:00:00:00:00 ; fixed-address 176.117.42.14 ; }
+host 0250084_01 {hardware ethernet 00:fd:45:fd:15:8c ; fixed-address 176.117.42.18; }
+host 0851322_01 {host-identifier option agent.circuit-id 0c:f0:01:0a ; fixed-address 176.117.42.19; }
+host 0851803_01 {host-identifier option agent.circuit-id 00:06:0c:f3:01:00:00:11 ; fixed-address 176.117.42.22; }

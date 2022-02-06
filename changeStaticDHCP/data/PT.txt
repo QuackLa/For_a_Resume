@@ -1,0 +1,25 @@
+shared-network User_PT.msk {
+        subnet 10.66.0.168 netmask 255.255.255.252 { option routers  10.66.0.169; }
+        subnet 178.213.9.0 netmask 255.255.255.0 { option routers 178.213.9.1;
+                range 178.213.9.2  178.213.9.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                allow unknown-clients;
+                }
+        subnet 176.117.40.0 netmask 255.255.255.0 { option routers 176.117.40.1;
+                range 176.117.40.10 176.117.40.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                allow unknown-clients;
+                }
+}
+
+host 0820196_01 {host-identifier option agent.circuit-id 00:06:0e:dc:01:00:00:13 ; fixed-address 176.117.40.2 ; }
+#host 2017111_01 {host-identifier option agent.circuit-id 0f:16:01:02 ; fixed-address 176.117.40.3; }
+host 2017111_01 {host-identifier option agent.circuit-id 00:06:0F:00:01:00:00:02 ; fixed-address 176.117.40.3; }
+host 0820164_01 {host-identifier option agent.circuit-id 00:04:0e:ef:01:0a ; fixed-address 176.117.40.4 ; }
+host 0851795_01 {host-identifier option agent.circuit-id 33:33:36:31:2d:31:2d:31:32 ; fixed-address 176.117.40.5; }
+host 0250128_01 {host-identifier option agent.circuit-id 00:06:0f:0d:01:00:00:03 ; fixed-address 176.117.40.6; }
+host 0250130_01 {host-identifier option agent.circuit-id 00:06:0f:02:01:00:00:0b ; fixed-address 176.117.40.7; }
+host 2017105_01 {host-identifier option agent.circuit-id 33:33:36:31:2d:31:2d:36 ; fixed-address 176.117.40.8 ; }
+host 0820223_01 {host-identifier option agent.circuit-id 00:06:0e:ef:01:00:00:11 ; fixed-address 176.117.40.9 ; }

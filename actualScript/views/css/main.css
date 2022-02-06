@@ -1,0 +1,33 @@
+body {
+    background: #91a0c7;
+}
+
+.table {
+    margin: 0 auto;
+    width: 70%;
+    border-spacing: 0 5px;
+}
+
+.table tr {
+    border: 1px solid black;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18;
+    box-shadow: 0 0 5px black;
+}
+
+.errorConnect,
+.errorLogin,
+.errorCommands {
+    background: #ff94a8;
+}
+
+.success,
+.search {
+    background: #66c957;
+}
+
+.endScript {
+    background: #ffc582;
+}

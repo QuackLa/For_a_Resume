@@ -1,0 +1,23 @@
+shared-network User_81-xx.msk {
+        subnet 10.66.0.40 netmask 255.255.255.252 { option routers  10.66.0.41; }
+        subnet 176.117.35.0 netmask 255.255.255.0 {
+                option routers 176.117.35.1;
+                range 176.117.35.2 176.117.35.3;
+                range 176.117.35.6 176.117.35.6;
+                range 176.117.35.10 176.117.35.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+         subnet 176.117.34.0 netmask 255.255.255.0 {
+                option routers 176.117.34.1;
+                range 176.117.34.2 176.117.34.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+}
+host 8000133_001 { host-identifier option agent.circuit-id 00:04:01:5f:00:20 ; fixed-address 176.117.35.4 ; }
+host 8000021_001 { host-identifier option agent.circuit-id 00:04:01:1a:00:0e ; fixed-address 176.117.35.5 ; }
+#host 8000672_001 { host-identifier option agent.circuit-id 00:04:01:7f:00:07 ; fixed-address 176.117.35.6 ; }
+host 8000723_001 { host-identifier option agent.circuit-id 00:04:01:85:01:19 ; fixed-address 176.117.35.7 ; }
+host 8000515_001 { host-identifier option agent.circuit-id 00:04:01:8c:01:05 ; fixed-address 176.117.35.8 ; }
+host 8000215_001 { host-identifier option agent.circuit-id 00:04:01:6b:00:03 ; fixed-address 176.117.35.9 ; }

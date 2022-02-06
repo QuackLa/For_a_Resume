@@ -1,0 +1,50 @@
+body
+{
+    background: linear-gradient(45deg, #b8b8b8, #3d3d3d);
+}
+
+select 
+{
+    background: #6ba0b0;
+    width: 200px;
+    outline: none;
+}
+
+input
+{
+    background: #c2af8a;
+    outline: none;
+    width: 600px;
+}
+
+button
+{
+    background: #ffd98c;
+    border-radius: 0 10px;
+    border: none;
+    outline: none;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+button:hover 
+{
+    box-shadow: 0 0 10px #3928fa;
+    background: #ffbc36;
+    cursor: pointer;
+}
+
+.container
+{
+    background: #6ba0b0;
+    border: 2px solid black;
+    border-radius: 10px 10px;
+    font-size: 18px;
+    padding: 1%;
+    margin-top: 1%
+}
+
+.container table tr td 
+{
+    font-size: 17px;
+}

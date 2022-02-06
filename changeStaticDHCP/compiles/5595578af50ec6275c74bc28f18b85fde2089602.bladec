@@ -1,0 +1,117 @@
+<!doctype html>
+<head>
+ <meta charset="utf-8">
+ <!-- Styles -->
+ <link href="views/css/dhcp.css" rel="stylesheet">
+</head>
+
+<body>
+
+<table>
+<form autocomplete="off" method="POST" action="index.php">
+ <tr>
+ <td><label>Район</label><td>
+ </tr>
+ <tr>
+ <td>
+ <?php if($select): ?>
+ <select name="district">
+ <?php $__currentLoopData = $select; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $k => $v): $loop = $this->incrementLoopIndices();  ?>
+ <option value="<?php echo \htmlentities($k, ENT_QUOTES, 'UTF-8', false); ?>" <?php if($name == $k): ?> selected="selected" <?php endif; ?>> <?php echo \htmlentities($k, ENT_QUOTES, 'UTF-8', false); ?> </option>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </select>
+ <?php endif; ?>
+ </td>
+ </tr>
+ <tr>
+ <td><label>Найти</label><td>
+ </tr>
+ <tr>
+ <td><input name="search" type="text" placeholder="Номер договора / IP-адресс"></td>
+ </tr>
+ <td>
+ <button>Выполнить</button>
+ <button name="all" value='all'>Показать всё содержимое файла</button><hr>
+ </td>
+ </tr>
+ <tr>
+ <td><label>Изменить</label>
+ </tr>
+ <tr>
+ <td><input name="changing" type="text" placeholder="Строка или её часть, которую хотим заменить"></td>
+ </tr>
+ <tr>
+ <td><input name="changeTo" type="text" placeholder="На что хотим заменить"></td>
+ </tr>
+ <td><button>Выполнить</button><hr></td>
+ </tr>
+ <tr>
+ <td><label>Удалить</label></td>
+ </tr>
+ <tr>
+ <td><input name="delete" type="text" placeholder="Введите содержимое строки или какую-то её часть"></td>
+ </tr>
+ <tr>
+ <td><button>Выполнить</button><hr></td>
+ </tr>
+ <tr>
+ <td><label>Создать</label></td>
+ </tr>
+ <tr>
+ <td><input name="create" type="text" placeholder="Введите содержимое строки или какую-то её часть"></td>
+ </tr>
+ <tr>
+ <td><button>Выполнить</button></td>
+ </tr>
+</form>
+</table>
+
+<?php if($message or $range or $lines): ?>
+ <div class="container">
+<?php endif; ?>
+
+<?php if($message): ?>
+<table>
+ <tr>
+ <td> <?php echo \htmlentities($message, ENT_QUOTES, 'UTF-8', false); ?> </td>
+ </tr>
+</table>
+<?php endif; ?>
+
+<?php if($range and is_array($range)): ?>
+<label>Рейнджи адресов:</label>
+<table>
+ <tr>
+ <?php $__currentLoopData = $range; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $key => $value): $loop = $this->incrementLoopIndices();  ?>
+ <td> <?php echo \htmlentities($value, ENT_QUOTES, 'UTF-8', false); ?> </td>
+ </tr>
+ <tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </tr>
+</table>
+<br>
+<?php endif; ?>
+
+<?php if($lines and is_array($lines)): ?>
+<label>Список абонентских записей:</label>
+<table>
+ <tr>
+ <?php $__currentLoopData = $lines; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $keygen => $val): $loop = $this->incrementLoopIndices();  ?>
+ <td> <?php echo \htmlentities($val, ENT_QUOTES, 'UTF-8', false); ?> </td>
+ </tr>
+ <tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </tr>
+</table>
+<?php endif; ?>
+
+<?php if($message or $range or $lines): ?>
+ </div>
+<?php endif; ?>
+
+</body>
+
+</html>

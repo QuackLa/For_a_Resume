@@ -1,0 +1,164 @@
+shared-network 73-01_static {
+        #0640001
+        subnet 178.213.10.160 netmask 255.255.255.240 { option routers 178.213.10.161;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+
+        subnet 178.213.10.224 netmask 255.255.255.224 { option routers 178.213.10.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+}
+shared-network User_73-xx.msk_dynamic {
+        subnet 10.66.0.36 netmask 255.255.255.252 { option routers  10.66.0.37; }
+        subnet 178.213.10.0 netmask 255.255.255.128 { option routers 178.213.10.1;
+                range 178.213.10.43 178.213.10.126;
+                max-lease-time 3600;
+                default-lease-time 3600;
+               }
+        subnet 178.213.11.0 netmask 255.255.255.0 { option routers 178.213.11.1;
+                range 178.213.11.2 178.213.11.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+        subnet 176.117.32.128 netmask 255.255.255.128 { option routers 176.117.32.129;
+                range 176.117.32.130 176.117.32.254;
+                max-lease-time 3600;
+                default-lease-time 3600;
+                }
+}
+host sap_001 { host-identifier option agent.circuit-id 00:04:0e:ae:01:01 ; fixed-address 178.213.10.2 ; }
+host 0640013_001 { host-identifier option agent.circuit-id 00:04:0d:b2:02:07 ; fixed-address 178.213.10.4 ; }
+host 0640046_001 { host-identifier option agent.circuit-id 00:04:0d:87:04:0e ; fixed-address 178.213.10.5 ; }
+host 0640061_001 { host-identifier option agent.circuit-id 00:04:0d:af:01:16 ; fixed-address 178.213.10.6 ; }
+host 2900501_001 { host-identifier option agent.circuit-id 00:06:02:be:01:00:00:02 ; fixed-address 178.213.10.7 ; }
+host 9000014_001 { host-identifier option agent.circuit-id 00:06:0e:1b:01:00:00:01 ; fixed-address 178.213.10.9 ; }
+host 0640004_001 { host-identifier option agent.circuit-id 00:04:0d:87:04:09 ; fixed-address 178.213.10.10 ; }
+host 0640023_001 { host-identifier option agent.circuit-id 00:04:0d:b1:01:12 ; fixed-address 178.213.10.11 ; }
+host 0640044_001 { host-identifier option agent.circuit-id 00:04:0d:b4:00:16 ; fixed-address 178.213.10.12 ; }
+host 0640024_001 { host-identifier option agent.circuit-id 00:04:0d:ad:01:14 ; fixed-address 178.213.10.13 ; }
+host 0640057_001 { host-identifier option agent.circuit-id 00:04:0d:b2:02:16 ; fixed-address 178.213.10.14 ; }
+host 0640026_001 { host-identifier option agent.circuit-id 00:04:0D:B1:01:13 ; fixed-address 178.213.10.15 ; }
+host 0640034_001 { host-identifier option agent.circuit-id 00:04:0D:B8:01:11 ; fixed-address 178.213.10.16 ; }
+host 0640012_001 { host-identifier option agent.circuit-id 00:04:0d:b0:02:11 ; fixed-address 178.213.10.18 ; }
+host 0640030_001 { host-identifier option agent.circuit-id 00:04:0d:b6:01:02 ; fixed-address 178.213.10.19 ; }
+host 9000143_001 { hardware ethernet 00:ad:24:e7:71:57 ; fixed-address 178.213.10.20 ; }
+host 0640042_001 { host-identifier option agent.circuit-id 00:04:0D:B4:01:15 ; fixed-address 178.213.10.21 ; }
+host 2900010_001 { host-identifier option agent.circuit-id 00:06:01:9d:01:00:00:0c ; fixed-address 178.213.10.22 ; }
+host 3900059_001 { host-identifier option agent.circuit-id 00:06:0e:a8:01:00:00:0d ; fixed-address 178.213.10.23 ; }
+host 3900119_001 { host-identifier option agent.circuit-id 00:06:0e:b0:01:00:00:03 ; fixed-address 178.213.10.24 ; }
+host 9000202_001 { host-identifier option agent.circuit-id 0e:12:01:02 ; fixed-address 178.213.10.25 ; }
+host sorm {host-identifier option agent.circuit-id 00:04:0D:B3:01:1A ; fixed-address 178.213.10.26 ; }
+host 0640051_001 { host-identifier option agent.circuit-id 00:04:0d:bb:01:0a ; fixed-address 178.213.10.27 ; }
+host 9000023_001 { host-identifier option agent.circuit-id 00:06:0E:14:01:00:00:07 ; fixed-address 178.213.10.28 ; }
+host 0740000_001 { hardware ethernet d4:ca:6d:8d:c0:6b ; fixed-address 178.213.10.29 ; }
+host 0640041_001 { host-identifier option agent.circuit-id 00:04:0d:ad:01:15 ; fixed-address 178.213.10.30 ; }
+host 0640036_001 { host-identifier option agent.circuit-id 00:04:0d:87:04:0c ; fixed-address 178.213.10.31 ; }
+host 9000020_001 { host-identifier option agent.circuit-id 00:06:0e:1c:01:00:00:01 ; fixed-address 178.213.10.32 ; }
+host 0740001_001 { host-identifier option agent.circuit-id 04:4c:00:06 ; fixed-address 178.213.10.33 ; }
+host 0740005_001 { host-identifier option agent.circuit-id 04:4c:00:0c ; fixed-address 178.213.10.34 ; }
+host 3900114_001 { host-identifier option agent.circuit-id 00:06:0e:a8:01:00:00:11  ; fixed-address 178.213.10.35 ; }
+host 0740009_001 { host-identifier option agent.circuit-id 04:4c:00:0e ; fixed-address 178.213.10.36 ; }
+host 0740019_001 { host-identifier option agent.circuit-id 04:4c:00:17 ; fixed-address 178.213.10.37 ; }
+host 0740023_001 { host-identifier option agent.circuit-id 04:4c:00:1a ; fixed-address 178.213.10.38 ; }
+host 0740036_001 { host-identifier option agent.circuit-id 04:4c:00:28 ; fixed-address 178.213.10.39 ; }
+host 2900507_001 { host-identifier option agent.circuit-id 00:06:02:be:01:00:00:08 ; fixed-address 178.213.10.40 ; }
+host 3900000_001 { host-identifier option agent.circuit-id 00:04:0e:af:01:08 ; fixed-address 178.213.10.41 ; }
+host 3900135_001 { host-identifier option agent.circuit-id 00:06:0e:aa:01:00:00:16 ; fixed-address 178.213.10.42 ; }
+
+# For Border users
+
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.161 ; }
+#host 0640001_001 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.162 ; }
+#host 0640001_002 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.163 ; }
+#host 0640001_003 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.164 ; }
+#host 0640001_004 { hardware ethernet 90:f6:52:e0:7e:9d ; fixed-address 178.213.10.165 ; }
+#host 0640001_005 { hardware ethernet 64:d1:54:a4:de:14 ; fixed-address 178.213.10.166 ; }
+#host 0640001_006 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.167 ; }
+#host 0640001_007 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.168 ; }
+#host 0640001_008 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.169 ; }
+host 0640007_001 { hardware ethernet 00:50:7f:cc:0e:7d ; fixed-address 178.213.10.170 ; }
+host 0640007_002 { hardware ethernet 00:16:b6:8f:4d:b3 ; fixed-address 178.213.10.171 ; }
+host 0640007_003 { hardware ethernet ac:22:0b:74:67:1d ; fixed-address 178.213.10.172 ; }
+host 0640007_004 { hardware ethernet 00:1d:aa:a8:aa:21 ; fixed-address 178.213.10.173 ; }
+#host 0640007_005 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.174 ; }
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.175 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.176 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.177 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.178 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.179 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.180 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.181 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.182 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.183 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.184 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.185 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.186 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.187 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.188 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.189 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.190 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.191 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.192 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.193 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.194 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.195 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.196 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.197 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.198 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.199 ; }
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.200 ; }
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.201 ; }
+#host xxxxxxx { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.202 ; }
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.203 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.204 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.205 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.206 ; }
+#host yyyyyyy { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.207 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.208 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.209 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.210 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.211 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.212 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.213 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.214 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.215 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.216 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.217 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.218 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.219 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.220 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.221 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.222 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.223 ; }
+######################### 178.213.10.224 #############################################
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.225 ; }
+host 0640011_001 { hardware ethernet 00:1E:67:13:D8:85 ; fixed-address 178.213.10.226 ; }
+host 0640011_002 { hardware ethernet a4:bf:01:09:77:72 ; fixed-address 178.213.10.227 ; }
+host 0640011_003 { hardware ethernet 00:1b:d5:fb:53:a6 ; fixed-address 178.213.10.228 ; }
+host 0640011_004 { hardware ethernet 00:1e:67:33:e0:eb ; fixed-address 178.213.10.229 ; }
+host 0640011_005 { hardware ethernet 50:C7:BF:4A:71:D9 ; fixed-address 178.213.10.230 ; }
+#host 0640011_006 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.231 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.232 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.233 ; }
+#host 0640011_007 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.234 ; }
+#host 0640011_008 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.235 ; }
+#host 0640011_009 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.236 ; }
+host 0640011_010 { hardware ethernet 00:1D:60:80:90:0D ; fixed-address 178.213.10.237 ; }
+host 0640011_011 { hardware ethernet 00:1B:21:40:9F:34 ; fixed-address 178.213.10.238 ; }
+#host 0640011_012 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.239 ; }
+host 0640005_001 { hardware ethernet 0c:c4:7a:0c:fc:e4 ; fixed-address 178.213.10.240 ; }
+host 0640005_002 { hardware ethernet 74:a0:2f:d0:46:38 ; fixed-address 178.213.10.241 ; }
+host 0640011_013 { hardware ethernet 50:c7:bf:4a:75:21 ; fixed-address 178.213.10.242 ; }
+#host 0640011_014 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.243 ; }
+host 0640011_015 { hardware ethernet 08:60:6e:12:0f:41 ; fixed-address 178.213.10.244 ; }
+#host 0640011_016 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.245 ; }
+host 0640011_017 { hardware ethernet 50:C7:BF:4A:70:1D ; fixed-address 178.213.10.246 ; }
+#host 0640011_018 { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.247 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.248 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.249 ; }
+#host xxxxxxx  { hardware ethernet xx:xx:xx:xx:xx:xx ; fixed-address 178.213.10.250 ; }
+host 0640032_001 { hardware ethernet a0:ab:1b:a4:d9:46 ; fixed-address 178.213.10.251 ; }
+#host 0640049_001 { hardware ethernet 7c:0e:ce:ef:21:10 ; fixed-address 178.213.10.252 ; }
+#host 0640049_002 { hardware ethernet 68:ef:bd:8c:6a:61 ; fixed-address 178.213.10.253 ; }
